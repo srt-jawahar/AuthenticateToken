@@ -1,0 +1,21 @@
+<div>
+    <h3>Login Form</h3>
+    <form>
+        <h5>Float Label</h5>
+        <span class="p-float-label">
+            <input id="float-input" name="username" type="text" pInputText [(ngModel)]="loginData.usernameOremployeeId">
+            <label for="float-input">Username</label>
+        </span>
+        <div>
+            <h5>Show Password</h5>
+            <p-password [(ngModel)]="loginData.password" name="password" [toggleMask]="true">
+            </p-password>
+        </div>
+        <div>
+            <button pButton type="button" label="Login" style="margin: 10px;" (click)="handleClick($event)">
+            </button>
+            <!-- <p-button label="Click" (onClick)="handleClick($event)"></p-button> -->
+        </div>
+    </form>
+    <p-toast></p-toast>
+</div>
